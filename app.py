@@ -122,7 +122,7 @@ with gr.Blocks(title="PersonaForge AI") as app:
 
     with gr.Tab("Roleplay"):
         rc=gr.Dropdown(choices=names("characters"),label="Character"); scene=gr.Textbox(label="Scene",lines=3); msg=gr.Textbox(label="Message")
-        chat=gr.Chatbot(type="messages",height=420); send=gr.Button("Send",variant="primary"); rs=gr.Textbox(show_label=False)
+        chat=gr.Chatbot(); send=gr.Button("Send",variant="primary"); rs=gr.Textbox(show_label=False)
         send.click(roleplay,[rc,scene,msg,chat],[chat,rs])
 
     with gr.Tab("Memories"):
